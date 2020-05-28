@@ -1,6 +1,6 @@
 FROM node:alpine as build-stage
 WORKDIR /app
-COPY frontend-example-docker .
+COPY . .
 RUN npm install
 ENV API_URL=http://localhost:8000
 RUN npm run build
